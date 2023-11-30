@@ -1,14 +1,26 @@
-server:
-  port: 8081
+#server:
+#  port: 8081
+#spring:
+#  application:
+#    name: user-service
+#  datasource:
+#    username: root
+#    password: 1234
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/db?createDatabaseIfNotExist=true
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+
 spring:
   application:
     name: user-service
-  datasource:
-    username: root
-    password: 1234
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db?createDatabaseIfNotExist=true
 eureka:
   client:
-    fetch-registry: true
     register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defualtZone: http://localhost:8761/eureka
+server:
+  port: 8081
